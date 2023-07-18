@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "decf9829-f0c7-4385-b4c6-e9c6d54fc605",
+		"name": "SwTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20518987"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "nafil@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "demo name",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmY1ZTIxOTRiZjhjZWIyYjliZTkwMGY4MWMxNTA4OGJkOWE0OGQyMmEyYzYzODU5NDg4NmM0ZmQ0NzI4OWNjOTU2ZmUzNDYwZGIwMmYxMWYiLCJpYXQiOjE2ODk1ODE3NzUuOTM0MTU2LCJuYmYiOjE2ODk1ODE3NzUuOTM0MTU5LCJleHAiOjE3MjEyMDQxNzUuOTIxNTUxLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.VacGvyKT2VfhWKJmlkiB4TdiIzwlv1BhEDUhDLH6Ajr8r5PqhF-IbtH95hVQlx7EASSu0AgulHRAgMp0yBZF9FOK2r4HVm-hf-0pKYDwOHp6vPZz_z12m3W_N4uYX9ajTHKe19OBuaAYxkuniVgxRootUkGTok-buR9NReajxhAGuOYPIHYhp9yxIZWXTgZokIkTWlTOQxgmobuKaXUxWPHipJvi0krxw0GHPg-VuqKMwxRmvVD6fRvFaWWwsqQTNwKmKqULNT1ScBFLUSoX7OgRLciVHqycriG5ILNn0wAD8tJ_u55yRqmnoZPaKaR5hc3nCx0xEyCBw-araPogCYQkKJRnNuNV0vcjJxaHbjh26q7NlDz1ZLrvsjQenkVmSScibVIfRQ0wtVq2rBqoCmxMof0tLKwTBkC9pLxKD_hvOjSUf7hLTYVt9GTvX72crcyRPAkbta8O6oUsr6HCwYhyvEvs7F1sJ19XiuF9FD5ID4GKUptfngwH3Zl-OnbKYmADoNEJZX9qNE4lmPvz58fh5igKLgQRoVlpsiUv1Cn92kKaGU4eYLvySGmBAp8iaRDZ7auADPg2kzYbez6szk5TXu1xNSidG0nemOfAloWY55zsZ69I65U7Fvhs6R7gNDRAvDz4xjn4L_RRyTzilYRBm_eA18GH7Qs7v58xnXM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get Movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTU1YTc1NDZiMzMwYzIxMGMxYjM4MDY0ZGY1NmZjMzdlNDEzNjdlYWNmOTEzZDkzYzk3YWRkZjdhZTI2NGRhN2Y4MGE5YTBiZmNlNzQyODEiLCJpYXQiOjE2ODk1ODUyMjUuMDQ0MjQ4LCJuYmYiOjE2ODk1ODUyMjUuMDQ0MjUsImV4cCI6MTcyMTIwNzYyNS4wMzI3NCwic3ViIjoiMSIsInNjb3BlcyI6W119.gwfvUdSLBZQCy9Fzx7W4UDJW34OfrgiGv5gua9D5-vuECCbbIiwp7zZie3sIPQPf4jkxDMhd-VFjx4GnWeErHAR5ibvAGKGdxfzapyiYe-A9PvUmRzF8ZmZoXpYauQ1eIUzE01yQyykGnKRi98WElfmEpO97XUxYvjQc6XgxaGqRsp6KVsHfuA6v1EWvDsKAgK1XLCmrT9xIaobCnl1cJ20ASI8V00SPzfhfPpw1LCY_6NfMq-aTa4GboKOIIFAo67ce3XONXB2IT10w7b0YdBYZImw-woaMNZhxdswVNGUKDYPN_k5poQpv1gQ-f1F1FeXPqVW8f6mI6kfg-IyROTpImhA6xVXfFcQfN0twUCG8-LDIMJTHFRYDgjutMTMxEYiis1c3ge1QkL0WNVfMMqWot9QijCpXrE6jgrjqwwt6bvY6OTfS5XIiy_RKxXgapDIcfDLqE5UayIrjLJYnRo4qdRTfOGoWMUbIDYivljw2suA5yZ9r_dc12GBzbQIqQ0Vts7an5fyJ3xB4KWJ3CjDZ913cu_mRpJSj-lbn9Ms1Hai7b3ieUg8hfoUTPoHKwglSHH89VCUqDFzFg04wbXpoQfUSq9-5cRmB1jSKHJMgbO0oqsNUcBL6pUUoY9nzVgwVoNg8O1XVoingXLWajML9t1_nP3ekOzyt-LzEaYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTU1YTc1NDZiMzMwYzIxMGMxYjM4MDY0ZGY1NmZjMzdlNDEzNjdlYWNmOTEzZDkzYzk3YWRkZjdhZTI2NGRhN2Y4MGE5YTBiZmNlNzQyODEiLCJpYXQiOjE2ODk1ODUyMjUuMDQ0MjQ4LCJuYmYiOjE2ODk1ODUyMjUuMDQ0MjUsImV4cCI6MTcyMTIwNzYyNS4wMzI3NCwic3ViIjoiMSIsInNjb3BlcyI6W119.gwfvUdSLBZQCy9Fzx7W4UDJW34OfrgiGv5gua9D5-vuECCbbIiwp7zZie3sIPQPf4jkxDMhd-VFjx4GnWeErHAR5ibvAGKGdxfzapyiYe-A9PvUmRzF8ZmZoXpYauQ1eIUzE01yQyykGnKRi98WElfmEpO97XUxYvjQc6XgxaGqRsp6KVsHfuA6v1EWvDsKAgK1XLCmrT9xIaobCnl1cJ20ASI8V00SPzfhfPpw1LCY_6NfMq-aTa4GboKOIIFAo67ce3XONXB2IT10w7b0YdBYZImw-woaMNZhxdswVNGUKDYPN_k5poQpv1gQ-f1F1FeXPqVW8f6mI6kfg-IyROTpImhA6xVXfFcQfN0twUCG8-LDIMJTHFRYDgjutMTMxEYiis1c3ge1QkL0WNVfMMqWot9QijCpXrE6jgrjqwwt6bvY6OTfS5XIiy_RKxXgapDIcfDLqE5UayIrjLJYnRo4qdRTfOGoWMUbIDYivljw2suA5yZ9r_dc12GBzbQIqQ0Vts7an5fyJ3xB4KWJ3CjDZ913cu_mRpJSj-lbn9Ms1Hai7b3ieUg8hfoUTPoHKwglSHH89VCUqDFzFg04wbXpoQfUSq9-5cRmB1jSKHJMgbO0oqsNUcBL6pUUoY9nzVgwVoNg8O1XVoingXLWajML9t1_nP3ekOzyt-LzEaYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTU1YTc1NDZiMzMwYzIxMGMxYjM4MDY0ZGY1NmZjMzdlNDEzNjdlYWNmOTEzZDkzYzk3YWRkZjdhZTI2NGRhN2Y4MGE5YTBiZmNlNzQyODEiLCJpYXQiOjE2ODk1ODUyMjUuMDQ0MjQ4LCJuYmYiOjE2ODk1ODUyMjUuMDQ0MjUsImV4cCI6MTcyMTIwNzYyNS4wMzI3NCwic3ViIjoiMSIsInNjb3BlcyI6W119.gwfvUdSLBZQCy9Fzx7W4UDJW34OfrgiGv5gua9D5-vuECCbbIiwp7zZie3sIPQPf4jkxDMhd-VFjx4GnWeErHAR5ibvAGKGdxfzapyiYe-A9PvUmRzF8ZmZoXpYauQ1eIUzE01yQyykGnKRi98WElfmEpO97XUxYvjQc6XgxaGqRsp6KVsHfuA6v1EWvDsKAgK1XLCmrT9xIaobCnl1cJ20ASI8V00SPzfhfPpw1LCY_6NfMq-aTa4GboKOIIFAo67ce3XONXB2IT10w7b0YdBYZImw-woaMNZhxdswVNGUKDYPN_k5poQpv1gQ-f1F1FeXPqVW8f6mI6kfg-IyROTpImhA6xVXfFcQfN0twUCG8-LDIMJTHFRYDgjutMTMxEYiis1c3ge1QkL0WNVfMMqWot9QijCpXrE6jgrjqwwt6bvY6OTfS5XIiy_RKxXgapDIcfDLqE5UayIrjLJYnRo4qdRTfOGoWMUbIDYivljw2suA5yZ9r_dc12GBzbQIqQ0Vts7an5fyJ3xB4KWJ3CjDZ913cu_mRpJSj-lbn9Ms1Hai7b3ieUg8hfoUTPoHKwglSHH89VCUqDFzFg04wbXpoQfUSq9-5cRmB1jSKHJMgbO0oqsNUcBL6pUUoY9nzVgwVoNg8O1XVoingXLWajML9t1_nP3ekOzyt-LzEaYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Starwars: Goretechsssss\",\n    \"original_language\":\"es\",\n    \"release_date\":\"2018-12-07 00:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTU1YTc1NDZiMzMwYzIxMGMxYjM4MDY0ZGY1NmZjMzdlNDEzNjdlYWNmOTEzZDkzYzk3YWRkZjdhZTI2NGRhN2Y4MGE5YTBiZmNlNzQyODEiLCJpYXQiOjE2ODk1ODUyMjUuMDQ0MjQ4LCJuYmYiOjE2ODk1ODUyMjUuMDQ0MjUsImV4cCI6MTcyMTIwNzYyNS4wMzI3NCwic3ViIjoiMSIsInNjb3BlcyI6W119.gwfvUdSLBZQCy9Fzx7W4UDJW34OfrgiGv5gua9D5-vuECCbbIiwp7zZie3sIPQPf4jkxDMhd-VFjx4GnWeErHAR5ibvAGKGdxfzapyiYe-A9PvUmRzF8ZmZoXpYauQ1eIUzE01yQyykGnKRi98WElfmEpO97XUxYvjQc6XgxaGqRsp6KVsHfuA6v1EWvDsKAgK1XLCmrT9xIaobCnl1cJ20ASI8V00SPzfhfPpw1LCY_6NfMq-aTa4GboKOIIFAo67ce3XONXB2IT10w7b0YdBYZImw-woaMNZhxdswVNGUKDYPN_k5poQpv1gQ-f1F1FeXPqVW8f6mI6kfg-IyROTpImhA6xVXfFcQfN0twUCG8-LDIMJTHFRYDgjutMTMxEYiis1c3ge1QkL0WNVfMMqWot9QijCpXrE6jgrjqwwt6bvY6OTfS5XIiy_RKxXgapDIcfDLqE5UayIrjLJYnRo4qdRTfOGoWMUbIDYivljw2suA5yZ9r_dc12GBzbQIqQ0Vts7an5fyJ3xB4KWJ3CjDZ913cu_mRpJSj-lbn9Ms1Hai7b3ieUg8hfoUTPoHKwglSHH89VCUqDFzFg04wbXpoQfUSq9-5cRmB1jSKHJMgbO0oqsNUcBL6pUUoY9nzVgwVoNg8O1XVoingXLWajML9t1_nP3ekOzyt-LzEaYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Movie (using Third Party Api)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmNjNjljYTI2MmZkYmM3NTUyZjE5Mzc4OTM2ZWM1ZWY4ZmJlNzRlZmFlZmRlNGU1ZTI0NTUyZjMyMDg4NjUxODA0MjMyMWU5OWYzMjViZTkiLCJpYXQiOjE2ODk2NDM5NjIuMjExNjIyLCJuYmYiOjE2ODk2NDM5NjIuMjExNjI0LCJleHAiOjE3MjEyNjYzNjIuMTkzMzQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.dQ0BJLLSQRrHxXqdzRzGdxZTm19fKceSjgJKj63OHD5CY1vWbxm6d-I2TuO_2KUTlbMwjMbAZcVIoBuzxVCSh1lHclT1uiHQCcqM0C5ONG-V-ftjnJXsLSTk1P-lRk9YEh5RJNiecapHhI7E2wynd7KlcjPWWbFNnk4eYfxnXGlB4TRSrg44YRioLTOMgPMdshus0HgEomMsf0xx5n7sGESJHWvn2OaL-UWX0yFBXdJAQc3LT9gKiHDBRPhlhcxQYxMr8B36XBHwuguucVH1qByOD-tYmlWJoeQK1Ke5iRx17S4WfHqmpfHjKU1IhcmC6D24gwScmBK4HX13xahx8XYC_Lm2epK0e8nN2CD_I_2LuAxU_O5XSKFlApzBLqTW0eEPClPbUqaeH9BYaFbKl8ZzAh2LehB2J1qFuR23bPRITEBN5xhEhN_-YzcWFL5b_nrfy0gC77j1f9k3ccfW0y4RsyRbnAMaCe_DsCQTpT0GfHvtKhKH75MaXae-AEI026ngoPyU9y5hc9fh99wHZ3cmfRLJShhnKzQR3sHkzZOYGCEKDqXtTlmFIwuu-j0mInZV0MWEat9WZRr7IigiYp2mKMKfxqUf7B-ho8QVGMO7807XjBwgfNXOZ-wa8wEXyPIViynAOuonHwpNllscTb4eLhFUm0wLpmTwrgH6U1E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
