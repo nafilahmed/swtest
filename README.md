@@ -1,7 +1,7 @@
 Steps To Run this Application:
 
 1- Intall PHP, Apatech Server, MYSQL and Composer on your machine.
-2- git pull this repo ()
+2- git pull this repo (https://github.com/nafilahmed/swtest.git)
 3- Create Database and configure it on .env file.
 4- Run "composer install".
 5- Run "php artisan migrate".
